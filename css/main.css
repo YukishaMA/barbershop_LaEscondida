@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
+/*
+ * Base structure
+ */ 
+
+/*upper Bar*/
+ .container {
+  max-width: 42em;
+}
+
+
+h2 {
+  font-family: 'Grenze Gotisch', cursive;
+  color: #26282b;
+}
+
+
+/*
+ * Header
+ */
+
+ .site-header {
+  background-color: #000000d9;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+    text-decoration: none;
+}
+
+.site-header a {
+  color: #8e8e8e;
+  transition: color .15s ease-in-out;
+  text-decoration: none;
+
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Footer
+ */
+
+footer ul{
+  list-style-type: none;
+}
+
+#menu_inferior ul li a{
+  color: #8e8e8e;
+  text-decoration: none;
+  transition: color .15s ease-in-out;
+}
+
+#menu_inferior ul li a:hover{
+  text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer h3{
+  color: #fff;
+}
+
+
+#listAc, #listAc2{
+  list-style: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#listAc{
+  text-align: right;
+}
+
+#navlist {
+  position: relative;
+}
+
+#navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+}
+
+#navlist li, #navlist a {
+  height: 50px;
+  display: block;
+}
+
+/*
+* Sprite
+*/
+
+#iconoFb {
+  background: url('../images/sprite.png') no-repeat 0 0;
+    background-size: 213px 105px;
+    width: 50px;
+    right: 380px;
+  }
+  
+  #iconoFb a:hover {
+  background: url('../images/sprite.png') no-repeat 0 100%;
+    background-size: 213px 105px;
+  }
+  
+  #iconoIn {
+    background: url('../images/sprite.png') no-repeat 96.923% 0;
+    background-size: 213px 105px;
+    width: 50px;
+    right: 300px;
+  }
+  
+  #iconoIn a:hover{
+    background: url('../images/sprite.png') no-repeat 96.923% 100%;
+    background-size: 213px 105px;
+  }
+
+/**/
+
+#nav {
+  float: left;
+  width: 31%;
+  height: max-content;
+  background-color: gray;
+  margin: 0px;
+  padding: 5px;
+}
+
+#content {
+  padding: 10px; /* TRBL; this keeps the text from flowing around the sidebar */
+  margin-left: 0px;
+}
+
+/*ABOUT*/
+
+.contentA{
+  background-image: url('../images/aboutLigth.jpg');
+  background-attachment: fixed;
+
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+/*SERVICIOS*/
+
+
+.contentS{
+  background-image: url('../images/servicios.jpg');
+  background-attachment: fixed;
+
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+.titleS{
+  font-family: 'Grenze Gotisch', cursive;
+  margin-top: 5%;
+  color: #f6eeee;
+}
+
+#tableS{
+  width: 100%;
+}
+
+#colL{
+  width:35%;
+}
+
+#colR{
+  width: max-content;
+  text-align: left;
+}
+
+#marginR{
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+/*Galery*/
+
+.containerG {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #26282b;
+}
+
+@media (min-width: 768px) {
+  .containerG {
+      width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .containerG {
+      width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .containerG {
+      width: 1170px;
+  }
+}
+
+@media (max-width: 800px) {
+#featureContainer .carousel-inner .carousel-item > div {
+display: none;
+}
+#featureContainer .carousel-inner .carousel-item > div:first-child {
+display: block;
+}
+}
+
+#featureContainer .carousel-inner .carousel-item.active,
+#featureContainer .carousel-inner .carousel-item-next,
+#featureContainer .carousel-inner .carousel-item-prev {
+display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+#featureContainer .carousel-inner .carousel-item-end.active,
+#featureContainer .carousel-inner .carousel-item-next {
+transform: translateX(25%);
+}
+
+#featureContainer .carousel-inner .carousel-item-start.active, 
+#featureContainer .carousel-inner .carousel-item-prev {
+transform: translateX(-25%);
+}
+#featureContainer .card img{
+width: 90%;
+height: 60vh;
+}
+#featureContainer .carousel-item{
+justify-content: space-between;
+}
+}
+@media (max-width: 767px) {
+#featureContainer .card img{
+width: 100%;
+height: 75vh;
+}
+}
+#featureContainer .carousel-inner .carousel-item-end,
+#featureContainer .carousel-inner .carousel-item-start { 
+transform: translateX(0);
+}
+#featureContainer .card{
+border: 0;
+}
+#featureContainer .card{
+position: relative;
+}
+#featureContainer .card .card-img-overlays{
+position: absolute;
+bottom: 15%;
+left: 10%;
+color: #f6eeee;
+font-weight: bolder;
+}
+#featureContainer a{
+text-decoration: none;
+}
+#featureContainer .indicator{
+border: 1px solid rgb(202, 202, 202);
+padding: 3px 6px 3px 6px;
+}
+#featureContainer .indicator:hover{
+  color: #8e8e8e;
+color: #8e8e8e;
+transition: 200ms;
+}
+#featureContainer .indicator:hover{
+  color: #8e8e8e;
+transition: 200ms;
+}
+#featureContainer .indicator {
+  color: #8e8e8e;
+}
+#featureContainer .float-end{
+padding-top: 10px;
+}
+
+/*RESERVA*/
+
+.form-outline{
+  color: #26282b;
+  font-family: 'Grenze Gotisch', cursive;
+
+}
+
+#formReserva{
+  color: #000;
+  max-width: 50%;
+  align-self: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#formReserva .subheading{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+}
+
+
+#formReserva .mb-2{
+  font-family: 'Grenze Gotisch';
+  font-weight: bold;
+}
+
+
+/*AGRADECIMIENTO*/
+
+.contentT{
+  background-image: url('../images/aboutLigth.jpg');
+  background-attachment: fixed;
+
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+}
+
+.titleT{
+  font-family: 'Grenze Gotisch', cursive;
+  margin-top: 5%;
+  color: #26282b;
+  font-weight: bold;
+}
+
+#ty{
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 50px;
+  color: #26282b;
+  font-weight: bold;
+  margin-bottom: 100px;
+}
+
+/*lOGIN*/
+
+#formAdmin{
+  color: #000;
+  align-self: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#formAdmin .subheading{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#formAdmin .mb-2{
+  font-family: 'Grenze Gotisch';
+  font-weight: bold;
+}
+
+.forgot-grid a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.1em;
+  transition: color .15s ease-in-out;
+  text-decoration: none;
+}
+
+.forgot-grid a:hover {
+  color: rgb(153, 46, 34);
+  text-decoration: none;
+}
+
+
+
